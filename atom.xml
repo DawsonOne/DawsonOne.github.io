@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-13T11:07:56.809Z</updated>
+  <updated>2020-02-14T06:57:51.858Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>redis笔记</title>
+    <link href="http://yoursite.com/2020/02/14/hexo%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2020/02/14/hexo%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-02-14T05:59:56.000Z</published>
+    <updated>2020-02-14T06:57:51.858Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Redis的启动和关闭">Redis的启动和关闭</h2><p><strong>步骤:</strong><br>1.服务端启动:<br>(1)进入相应的目录位置：usr/local/redis<br>(2)执行./bin/redis-server<br>2.客户端启动:<br>(1)同上<br>(2)./bin/redis-cli<br>3.执行ping，出来pong就代表成功<br>4.关闭：直接shutdown</p><hr><h2 id="常用指令">常用指令</h2><p>1.DEL key:删除一个key<br>2.DUMP key：序列化给定的key，并返回序列化的值<br>3.EXISTS key：检查给定的key是存在<br>4.EXPIRE key seconds：为给定的key设置过期时间（单位是秒）<br>5.PEXPIRE key milliseconds：设置过期时间（单位是毫秒）<br>6.TTL key：返回指定key的剩余生存时间（秒）<br>7.PTTL key：剩余生存时间（毫秒）<br>8.PERSIST key：移除key的过期时间，key将永久保持<br>9.KEYS pattern：查找所有符合给定模式的key<br>eg：keys 通配符（*，？）<br>10.RNAME key newkey:修改key的名称<br>11.MOVE key db：将指定key从当前数据库移到指定数据库db中<br>12.TYPE key：返回指定key的类型<br>==应用场景：==<br>EXPIRE key seconds<br>1.限时的优惠活动<br>2.数据缓存，比如积分榜<br>3.手机验证码</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Redis的启动和关闭&quot;&gt;Redis的启动和关闭&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;步骤:&lt;/strong&gt;&lt;br&gt;
+1.服务端启动:&lt;br&gt;
+(1)进入相应的目录位置：usr/local/redis&lt;br&gt;
+(2)执行./bin/redis-server&lt;br&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="redis" scheme="http://yoursite.com/categories/redis/"/>
+    
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="redis" scheme="http://yoursite.com/tags/redis/"/>
+    
+  </entry>
   
   <entry>
     <title>xiuxiu</title>
