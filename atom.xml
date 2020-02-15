@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-14T06:57:51.858Z</updated>
+  <updated>2020-02-15T10:44:30.180Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/02/14/hexo%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2020/02/14/hexo%E7%AC%94%E8%AE%B0/</id>
     <published>2020-02-14T05:59:56.000Z</published>
-    <updated>2020-02-14T06:57:51.858Z</updated>
+    <updated>2020-02-15T10:44:30.180Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Redis的启动和关闭">Redis的启动和关闭</h2><p><strong>步骤:</strong><br>1.服务端启动:<br>(1)进入相应的目录位置：usr/local/redis<br>(2)执行./bin/redis-server<br>2.客户端启动:<br>(1)同上<br>(2)./bin/redis-cli<br>3.执行ping，出来pong就代表成功<br>4.关闭：直接shutdown</p><hr><h2 id="常用指令">常用指令</h2><p>1.DEL key:删除一个key<br>2.DUMP key：序列化给定的key，并返回序列化的值<br>3.EXISTS key：检查给定的key是存在<br>4.EXPIRE key seconds：为给定的key设置过期时间（单位是秒）<br>5.PEXPIRE key milliseconds：设置过期时间（单位是毫秒）<br>6.TTL key：返回指定key的剩余生存时间（秒）<br>7.PTTL key：剩余生存时间（毫秒）<br>8.PERSIST key：移除key的过期时间，key将永久保持<br>9.KEYS pattern：查找所有符合给定模式的key<br>eg：keys 通配符（*，？）<br>10.RNAME key newkey:修改key的名称<br>11.MOVE key db：将指定key从当前数据库移到指定数据库db中<br>12.TYPE key：返回指定key的类型<br>==应用场景：==<br>EXPIRE key seconds<br>1.限时的优惠活动<br>2.数据缓存，比如积分榜<br>3.手机验证码</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Redis的启动和关闭">Redis的启动和关闭</h2><p><strong>步骤:</strong><br>1.服务端启动:<br>(1)进入相应的目录位置：usr/local/redis<br>(2)执行./bin/redis-server<br>2.客户端启动:<br>(1)同上<br>(2)./bin/redis-cli<br>3.执行ping，出来pong就代表成功<br>4.关闭：直接shutdown</p><hr><h2 id="常用指令">常用指令</h2><h3 id="1-Redis键命令">(1) Redis键命令</h3><p>1.DEL key:删除一个key<br>2.DUMP key：序列化给定的key，并返回序列化的值<br>3.EXISTS key：检查给定的key是存在<br>4.EXPIRE key seconds：为给定的key设置过期时间（单位是秒）<br>5.PEXPIRE key milliseconds：设置过期时间（单位是毫秒）<br>6.TTL key：返回指定key的剩余生存时间（秒）<br>7.PTTL key：剩余生存时间（毫秒）<br>8.PERSIST key：移除key的过期时间，key将永久保持<br>9.KEYS pattern：查找所有符合给定模式的key<br>eg：keys 通配符（*，？）<br>10.RNAME key newkey:修改key的名称<br>11.MOVE key db：将指定key从当前数据库移到指定数据库db中<br>12.TYPE key：返回指定key的类型<br>==应用场景：==<br>EXPIRE key seconds<br>1.限时的优惠活动<br>2.数据缓存，比如积分榜<br>3.手机验证码</p><h3 id="2-String命令">(2)String命令</h3><p><strong>赋值语法：</strong><br>1.SET KEY_NAME VALUE<br>用于设置给定key的值。如果值已经存在，则会覆盖旧值，并无视类型<br>2.SETNX key value<br>只有在key不存在时设置key的值。SET IF NOT EXISTS<br>3.MSET key1 value1 key2 value2…<br>同时设置一个或多个键值对<br><strong>取值语法：</strong><br>1.get key_name<br>获取指定key的值，如果不存在返回nil。如果key的值不是字符串类型会报错。<br>2.GETRANGE key start end<br>用于获取指定key的值得子字符串。包括start不包括end<br>3.MGET key1 key2…<br>获取一个或多个key的值。<br>4.GETSET key_name value<br>设定指定key的值，并返回旧值。如果不存在返回nil。<br>5.STRLEN key<br>返回指定key值得字符串长度。<br><strong>删除语法：</strong><br>1.DEL KEY_NAME<br>删除指定key，如果存在，会返回值，数字类型。<br><strong>自增自减（重要）：</strong><br>1.INCR key_name<br>该命令会将key中的数字值加1,。如果key不存在，那么key的值会先被初始化为0，然后执行加1操作。<br>2.INCRBY KEY_NAME 增量值<br>将指定key的值增加指定数量的值<br>3.DECR key_name 或DECRBY key_name 减值<br>4.APPEND key_name value<br>在指定key的值后追加值，如果不存在，为其赋值。</p>]]></content>
     
     <summary type="html">
     
