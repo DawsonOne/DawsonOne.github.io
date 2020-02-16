@@ -204,6 +204,46 @@ EXPIRE key seconds<br>
 为哈希表key中的指定字段的浮点数值加上增量值。<br>
 4.HEXISTS KEY FIELD<br>
 查看哈希表key中，指定字段是否存在。</p>
+<h3 id="（4）List相关">（4）List相关</h3>
+<h5 id="Redis中的list类似于Java中的LinkedList。">Redis中的list类似于Java中的LinkedList。</h5>
+<p><strong>赋值语法：</strong><br>
+1.LPUSH KEY VALUE [VALUE1]<br>
+将一个或多个值插入到列表的头部（从左侧添加）<br>
+2.RPUSH key value [value1]<br>
+在列表中添加一个或多个值（从右侧添加）<br>
+3.LPUSHX key value<br>
+将一个值插入到已存在的列表头部。如果列表不在，操作无效。<br>
+4.RPUSH key value<br>
+一个值插入已经存在列表的尾部。如果列表不存，操作无效。<br>
+<strong>取值语法：</strong><br>
+1.LLEN key<br>
+获取列表长度。<br>
+2.LINDEX KEY INDEX<br>
+通过索引获取列表中的元素。<br>
+3.LRANGE KEY START STOP<br>
+获取列表指定范围类的元素。这里要说明的是：其中0表示列表的第一个元素，1表示列表的第二个元素。也可以使用负数下标，以-1表示列表的最后一个元素，-2表示列表的倒数第二个元素。0 -1就是所有元素。<br>
+<strong>删除元素：</strong><br>
+1.LPOP key<br>
+移出并获取列表的第一个元素（从左侧删除）<br>
+2.RPOP key<br>
+移除列表的最后一个元素，返回值为移除的元素（从右侧删除）<br>
+3.BLPOP key1 [key2] timeout<br>
+移除并获取列表的第一个元素，如果列表没有元素会阻塞列表知道等待超时或发现可弹出元素为止。time的单位是秒<br>
+4.BRPOP key1 [key2] timeout<br>
+移出并获取列列表的最后一个元素，如果列表没有元素会阻塞列列表直到等待超时或发现可<br>
+弹出元素为止。<br>
+5.LTRIM key start stop<br>
+对一个列表进行修剪，就是说，让列表只保留指定区间内的元素，不在指定区间内的元素都将被删除。<br>
+<strong>修改语法：</strong><br>
+1.LSET KEY INDEX VALUE<br>
+通过索引设置列表元素的值<br>
+2.LINSERT KEY BEFORE\AFTTER 值 VALUE<br>
+在列表的元素前后插入元素</p>
+<h3 id="（5）高级语法">（5）高级语法</h3>
+<p>1.RPOPLPUSH source destination<br>
+移除列表的最后一个元素，并将该元素添加到另一个列表并返回。<br>
+RPOPLPUSH a1 a2：将a1的最后一个元素移到a2的左侧<br>
+RPOPPUSH a1 a1：循环列表，将最后一个元素移到最左侧</p>
 
       
       <!-- reward -->
