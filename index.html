@@ -175,6 +175,35 @@ EXPIRE key seconds<br>
 3.DECR key_name 或DECRBY key_name 减值<br>
 4.APPEND key_name value<br>
 在指定key的值后追加值，如果不存在，为其赋值。</p>
+<h3 id="（3）Hash命令">（3）Hash命令</h3>
+<p><strong>赋值语法：</strong><br>
+1.HSET KEY FIELD VALUE<br>
+为指定的key设置属性和值<br>
+2.HMSET KEY VALUE [FIELD1 VALUE1]<br>
+为key设置多个域-值<br>
+<strong>取值语法：</strong><br>
+1.HGET KEY FIELD<br>
+获取存储在HASH中的值，根据FIELD得到VALUE<br>
+2.HMGET KEY FIELD[FIELD1]<br>
+获取指定key中所有给定属性对应的值。<br>
+3.HGETALL KEY<br>
+返回HASH表中所有字段和值<br>
+4.HKEYS key<br>
+获取所有哈希表中的字段，即属性名。<br>
+5.HLEN key<br>
+获取哈希表中字段的数量。<br>
+<strong>删除语法：</strong><br>
+1.HDEL KEY FIELD[field1]<br>
+删除一个或多个HASH表字段。对应的内容自然也没了、<br>
+<strong>其他语法：</strong><br>
+1.HSETNX KEY FIELD VALUE<br>
+只有在字段field不存在时，设置哈希表字段的值<br>
+2.HINCRBY key field 数量值<br>
+为哈希表key中的指定字段整数值加上增量值。<br>
+3.HINCRBYFLOAT key field 数量值<br>
+为哈希表key中的指定字段的浮点数值加上增量值。<br>
+4.HEXISTS KEY FIELD<br>
+查看哈希表key中，指定字段是否存在。</p>
 
       
       <!-- reward -->
