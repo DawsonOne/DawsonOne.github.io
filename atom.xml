@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-08T12:26:38.873Z</updated>
+  <updated>2020-06-03T04:00:59.703Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub - 高效查找开源项目</title>
+    <link href="http://yoursite.com/2020/06/03/GitHub-%E9%AB%98%E6%95%88%E6%9F%A5%E6%89%BE%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://yoursite.com/2020/06/03/GitHub-%E9%AB%98%E6%95%88%E6%9F%A5%E6%89%BE%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
+    <published>2020-06-03T03:52:59.000Z</published>
+    <updated>2020-06-03T04:00:59.703Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、按照项目搜索<br>in:name xxx<br>2、按照README搜索<br>in readme xxx<br>3、按照description搜索<br>in description xxx<br>4、按照stars数搜索<br>stars: &gt;xxx<br>5、forks数搜索<br>forks: &gt;xxx<br>6、按照编程语言搜搜<br>language:xxx<br>7、最新更新时间晚于YYYY-MM-DD<br>pushed: &gt;YYYY-MM-DD</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、按照项目搜索&lt;br&gt;
+in:name xxx&lt;br&gt;
+2、按照README搜索&lt;br&gt;
+in readme xxx&lt;br&gt;
+3、按照description搜索&lt;br&gt;
+in description xxx&lt;br&gt;
+4、按照stars数搜索&lt;br&gt;
+stars: &amp;gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>2020.05.08</title>
